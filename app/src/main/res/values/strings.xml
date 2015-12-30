@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Clicker</string>
+    <string name="farmCrop">Farm Crops</string>
+    <string name="cropDisplayValue">Do some farming!</string>
+    <string name="cropVal"> crops!</string>
+    <string name="upgradeButton">Farm more to upgrade!</string>
+</resources>
