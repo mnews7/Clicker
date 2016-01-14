@@ -7,6 +7,9 @@ public class FarmCountLogic {
     double cropCount = 0;
     double cropCountIncrement = 1;
     double upgrade = 1;
+    double cropsPerSecond = 0;
+
+
 
     //call this method to increment crop by cropCountIncrement
     public double incrementCrops (){
@@ -14,29 +17,40 @@ public class FarmCountLogic {
         return cropCount;
     }
 
-
     public double getCropCount(){
         return cropCount;
     }
 
-    //call this in conjunction with remove crops to upgrade clicks
+    //call this to upgrade clicks
     public double changeIncrement (){
 
-        //TODO determine how applicable the function is
-        cropCountIncrement = cropCountIncrement+(upgrade*Math.exp(3.0));
-        upgrade = upgrade+5;
+        cropCountIncrement = cropCountIncrement+1;
+        removeCrops(costToUpgrade());
+        upgrade = (upgrade*Math.exp(1.15));
         return cropCountIncrement;
     }
 
     public double removeCrops(double remove){
         cropCount = cropCount-remove;
-        return cropCount-remove;
+        return cropCount;
     }
 
     public double costToUpgrade(){
-        //generate an array of costs?
-
-        return Math.exp(upgrade);
+        return upgrade*Math.exp(1.15);
     }
+
+    public void cpsIncrement(double increment){
+        cropsPerSecond=cropsPerSecond+increment;
+
+    }
+    public double getCropsPerSecond(){
+        return cropsPerSecond;
+    }
+
+    public void cpsAddCrops(double cps){
+        cropCount = cropCount+cps;
+    }
+
+
 }
 

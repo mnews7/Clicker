@@ -44,4 +44,13 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:onClick="upgradeClick"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Give me a Farmer!!!"
+        android:id="@+id/addFarmerBut"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="addCPSClick"/>
 </RelativeLayout>
